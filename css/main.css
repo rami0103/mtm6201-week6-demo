@@ -1,0 +1,42 @@
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    flex: 1;
+}
+
+main > p {
+    font-size: 1.2rem;
+}
+
+h2+p {
+    background-color: black;
+    color: white;
+    padding: 1rem;
+}
+
+.stars span:hover ~ span {
+    opacity: .5;
+}
+
+.stars span {
+    cursor: pointer;
+}
+
+a[href="#"] {
+    color: tomato;
+}
+
+a[href="https"] {
+    border-left: 4px solid violet;
+    padding-left: 1rem;
+}
