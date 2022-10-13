@@ -1,3 +1,10 @@
+:root {
+    --special-color: tomato;
+    --second-color: #551cf1;
+    --light-color: white;
+    --dark-color: black;
+}
+
 .container {
     max-width: 900px;
     margin: 0 auto;
@@ -33,10 +40,59 @@ h2+p {
 }
 
 a[href="#"] {
-    color: tomato;
+    color: var(--special-color);
 }
 
 a[href="https"] {
     border-left: 4px solid violet;
     padding-left: 1rem;
+}
+
+nav a,
+nav a:link,
+nav a:visited {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: transform .3s;
+}
+
+nav a:hover,
+nav a:focus {
+    text-decoration: underline;
+    transform: scale(1.2);
+}
+
+nav a:active {
+    transform: scale(1.2) translateX(10px);
+}
+
+/* Pseudo Elements */
+
+a[href$=".pdf"]::after {
+    content: "\2913";
+    font-size: 1.25rem;
+    color: tomato;
+}
+
+h2+p::first-line {
+    color: tomato;
+}
+
+h3+p::first-letter {
+    background-color: #551cf1;
+    color: white;
+    padding: .25rem;
+    margin-right: .15rem;
+}
+
+/* Calc function */
+
+.google {
+    display: block;
+    background-color: lavender;
+    /* width: 100%; it will overflow from the container because of the border, padding and margin */
+    width: calc(100% - 5rem - 4px);
+    padding: 2rem;
+    margin: 1rem;
 }
